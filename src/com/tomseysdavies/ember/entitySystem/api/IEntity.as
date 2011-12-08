@@ -1,8 +1,6 @@
 package com.tomseysdavies.ember.entitySystem.api
 {
 	import flash.utils.Dictionary;
-	
-	import org.osflash.signals.ISignalOwner;
 
 	public interface IEntity
 	{

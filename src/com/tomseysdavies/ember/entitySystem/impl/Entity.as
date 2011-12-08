@@ -5,16 +5,16 @@ package com.tomseysdavies.ember.entitySystem.impl
 	
 	import flash.utils.Dictionary;
 	
-	import org.osflash.signals.ISignalOwner;
+	import org.osflash.signals.ISignal;
 
 	public final class Entity implements IEntity
 	{
 		private var _name:String;		
 		private var _components:Dictionary;	
-		private var _componentAdded:ISignalOwner;
-		private var _componentRemoved:ISignalOwner;
+		private var _componentAdded:ISignal;
+		private var _componentRemoved:ISignal;
 		
-		public function Entity(name:String, componentAdded:ISignalOwner, componentRemoved:ISignalOwner)
+		public function Entity(name:String, componentAdded:ISignal, componentRemoved:ISignal)
 		{
 			_name = name;
 			_components = new Dictionary();
