@@ -137,5 +137,20 @@ package com.tomseysdavies.ember.entitySystem.impl
 			var nodes:Vector.<MockNode> = injector.getInstance(type);
 			assertTrue(nodes[0].entity === a);
 		}
+		
+		
+		[Test]
+		public function entities_are_removed_from_family_when_removed():void
+		{
+			var family:IFamily = system.requestFamiliy(MockNode);
+			
+			var a:IEntity = system.create();
+			a.add(new MockComponentA());
+			a.add(new MockComponentB());
+			
+			system.remove(a);
+			var nodes:Vector.<MockNode> = family.nodes as Vector.<MockNode>;
+			assertTrue(nodes.length == 0);
+		}
 	}
 }

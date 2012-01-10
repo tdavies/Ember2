@@ -1,7 +1,7 @@
 package com.tomseysdavies.ember.entitySystem.impl
 {
-	import com.tomseysdavies.ember.entitySystem.api.IEntity;
 	import com.tomseysdavies.ember.entitySystem.api.IEntities;
+	import com.tomseysdavies.ember.entitySystem.api.IEntity;
 	import com.tomseysdavies.ember.entitySystem.api.IFamily;
 	import com.tomseysdavies.utils.VectorMap;
 	
@@ -58,6 +58,10 @@ package com.tomseysdavies.ember.entitySystem.impl
 		
 		public function remove(entity:IEntity):void
 		{
+			var components:Dictionary = entity.getAll();
+			for (var componentClass:Object in components){
+				entity.remove(componentClass as Class);
+			}
 			delete _nameMap[entity.name];
 			_entityMap.remove(entity);
 		}

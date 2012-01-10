@@ -9,20 +9,22 @@
 			   minWidth="955" minHeight="600" creationComplete="onCreationComplete()">
 	<fx:Script>
 		<![CDATA[
-			import com.tomseysdavies.ember.entitySystem.impl.EntityTest;
 			import com.tomseysdavies.utils.VectorMapTest;
-			import com.tomseysdavies.ember.entitySystem.impl.EntitySystemTest;
 			import com.tomseysdavies.ember.entitySystem.impl.NodeConfigurationTest;
+			import com.tomseysdavies.ember.entitySystem.impl.EntityTest;
+			import com.tomseysdavies.ember.io.ComponentConfigTests;
 			import com.tomseysdavies.ember.entitySystem.impl.SystemsTest;
+			import com.tomseysdavies.ember.entitySystem.impl.EntitySystemTest;
 			
 			public function currentRunTestSuite():Array
 			{
 				var testsToRun:Array = new Array();
-				testsToRun.push(com.tomseysdavies.ember.entitySystem.impl.SystemsTest);
-				testsToRun.push(com.tomseysdavies.ember.entitySystem.impl.NodeConfigurationTest);
 				testsToRun.push(com.tomseysdavies.ember.entitySystem.impl.EntitySystemTest);
-				testsToRun.push(com.tomseysdavies.utils.VectorMapTest);
+				testsToRun.push(com.tomseysdavies.ember.entitySystem.impl.SystemsTest);
+				testsToRun.push(com.tomseysdavies.ember.io.ComponentConfigTests);
 				testsToRun.push(com.tomseysdavies.ember.entitySystem.impl.EntityTest);
+				testsToRun.push(com.tomseysdavies.ember.entitySystem.impl.NodeConfigurationTest);
+				testsToRun.push(com.tomseysdavies.utils.VectorMapTest);
 				return testsToRun;
 			}
 			
