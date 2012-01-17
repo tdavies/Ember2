@@ -2,7 +2,7 @@ package com.tomseysdavies.ember.entitySystem.impl
 {
 	
 	import com.tomseysdavies.ember.entitySystem.api.IEntity;
-	import com.tomseysdavies.ember.entitySystem.api.IEntities;
+	import com.tomseysdavies.ember.entitySystem.api.IEntityManager;
 	import com.tomseysdavies.ember.entitySystem.api.IFamily;
 	
 	import flexunit.framework.Assert;
@@ -23,14 +23,14 @@ package com.tomseysdavies.ember.entitySystem.impl
 	{		
 		private static const NAME:String = "testName";
 		
-		private var system:IEntities;
+		private var system:IEntityManager;
 		private var injector:Injector;
 		
 		[Before]
 		public function setUp():void
 		{
 			injector = new Injector();
-			system = new Entities(injector);
+			system = new EntityManager(injector);
 		}
 		
 		[After]

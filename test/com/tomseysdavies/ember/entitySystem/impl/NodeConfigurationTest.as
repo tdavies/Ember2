@@ -18,12 +18,12 @@ package com.tomseysdavies.ember.entitySystem.impl
 	public class NodeConfigurationTest
 	{		
 		private var _nodeconfig:NodeConfiguration;
-		private var _entitySystem:Entities;
+		private var _entitySystem:EntityManager;
 		
 		[Before]
 		public function setUp():void
 		{
-			_entitySystem = new Entities(new Injector());
+			_entitySystem = new EntityManager(new Injector());
 			_nodeconfig = new NodeConfiguration(MockNode);
 		}
 		

@@ -1,8 +1,8 @@
 package com.tomseysdavies.ember.entitySystem.impl
 {
 	import com.tomseysdavies.ember.entitySystem.api.ISystem;
-	import com.tomseysdavies.ember.entitySystem.api.ISystems;
-	import com.tomseysdavies.ember.entitySystem.impl.Systems;
+	import com.tomseysdavies.ember.entitySystem.api.ISystemManager;
+	import com.tomseysdavies.ember.entitySystem.impl.SystemManager;
 	
 	import mocks.MockNode;
 	import mocks.MockSystem;
@@ -16,13 +16,13 @@ package com.tomseysdavies.ember.entitySystem.impl
 	
 	public class SystemsTest
 	{
-		private var systems:ISystems;
+		private var systems:ISystemManager;
 		
 		[Before]
 		public function before():void
 		{
 			var injector:Injector = new Injector();
-			systems = new Systems(injector);
+			systems = new SystemManager(injector);
 		}
 		
 		[After]

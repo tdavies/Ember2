@@ -2,7 +2,7 @@ package com.tomseysdavies.ember.entitySystem.api
 {
 	import org.osflash.signals.Signal;
 
-	public interface IEntities
+	public interface IEntityManager
 	{
 		function create(name:String=null):IEntity;
 		function get(name:String):IEntity;

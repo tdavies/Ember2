@@ -1,13 +1,13 @@
 package com.tomseysdavies.ember.entitySystem
 {
 	
-	import com.tomseysdavies.ember.entitySystem.api.IEntities;
-	import com.tomseysdavies.ember.entitySystem.api.ISystems;
-	import com.tomseysdavies.ember.entitySystem.impl.Entities;
-	import com.tomseysdavies.ember.entitySystem.impl.Systems;
+	import com.tomseysdavies.ember.entitySystem.api.IEntityManager;
+	import com.tomseysdavies.ember.entitySystem.api.ISystemManager;
+	import com.tomseysdavies.ember.entitySystem.impl.EntityManager;
+	import com.tomseysdavies.ember.entitySystem.impl.SystemManager;
 	
-	import org.robotlegs.v2.core.api.IContext;
-	import org.robotlegs.v2.core.api.IContextExtension;
+	import robotlegs.bender.core.api.IContext
+	import robotlegs.bender.core.api.IContextExtension;
 	
 	public class EntitySystemExtension implements IContextExtension
 	{
@@ -16,10 +16,10 @@ package com.tomseysdavies.ember.entitySystem
 		}
 		
 		public function install(context:IContext):void{
-			var entitySystem:IEntities =  new Entities(context.injector);
-			context.injector.map(IEntities).toValue(entitySystem);
-			var systems:ISystems = new Systems(context.injector);
-			context.injector.map(ISystems).toValue(systems);
+			var entitySystem:IEntityManager =  new EntityManager(context.injector);
+			context.injector.map(IEntityManager).toValue(entitySystem);
+			var systems:ISystemManager = new SystemManager(context.injector);
+			context.injector.map(ISystemManager).toValue(systems);
 		}
 		
 		public function initialize():void{

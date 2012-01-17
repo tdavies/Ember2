@@ -1,6 +1,6 @@
 package com.tomseysdavies.ember.entitySystem.impl
 {
-	import com.tomseysdavies.ember.entitySystem.api.IEntities;
+	import com.tomseysdavies.ember.entitySystem.api.IEntityManager;
 	import com.tomseysdavies.ember.entitySystem.api.IEntity;
 	import com.tomseysdavies.ember.entitySystem.api.IFamily;
 	import com.tomseysdavies.utils.VectorMap;
@@ -10,7 +10,7 @@ package com.tomseysdavies.ember.entitySystem.impl
 	import org.osflash.signals.Signal;
 	import org.swiftsuspenders.Injector;
 	
-	final public class Entities implements IEntities
+	final public class EntityManager implements IEntityManager
 	{
 		private const _entityMap:VectorMap = new VectorMap(IEntity);
 		private var _nameMap:Dictionary = new Dictionary();
@@ -18,7 +18,7 @@ package com.tomseysdavies.ember.entitySystem.impl
 		private const _entityComponentRemoved:Signal = new Signal(IEntity, Class);
 		private var _families:Families;
 		
-		public function Entities(injector:Injector)
+		public function EntityManager(injector:Injector)
 		{
 			_families = new Families(this,injector);
 		}
@@ -69,6 +69,7 @@ package com.tomseysdavies.ember.entitySystem.impl
 		public function removeAll():void
 		{
 			_entityMap.removeAll();
+			_nameMap = new Dictionary();
 		}
 		
 		public function requestFamiliy(nodeClass:Class):IFamily{

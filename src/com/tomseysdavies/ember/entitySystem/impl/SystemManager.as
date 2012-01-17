@@ -2,18 +2,18 @@ package com.tomseysdavies.ember.entitySystem.impl
 {
 
 	import com.tomseysdavies.ember.entitySystem.api.ISystem;
-	import com.tomseysdavies.ember.entitySystem.api.ISystems;
+	import com.tomseysdavies.ember.entitySystem.api.ISystemManager;
 	
 	import flash.utils.Dictionary;
 	
 	import org.swiftsuspenders.Injector;
 	
-	final public class Systems implements ISystems
+	final public class SystemManager implements ISystemManager
 	{
 		private var _injector:Injector;
 		private var _systems:Dictionary;
 		
-		public function Systems(injector:Injector)
+		public function SystemManager(injector:Injector)
 		{
 			_injector = injector;
 			_systems = new Dictionary();

@@ -10,12 +10,12 @@ package com.tomseysdavies.ember.entitySystem.impl
 	final internal class Families
 	{
 		
-		private var _entitySystem:Entities;
+		private var _entitySystem:EntityManager;
 		private var _familiyMap:Dictionary = new Dictionary();
 		private var _componentFamiliyMap:ComponentFamiliyMap = new ComponentFamiliyMap();
 		private var _injector:Injector;
 		
-		public function Families(entitySystem:Entities,injector:Injector)
+		public function Families(entitySystem:EntityManager,injector:Injector)
 		{
 			_injector = injector;
 			_entitySystem = entitySystem;

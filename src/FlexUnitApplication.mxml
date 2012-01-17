@@ -9,7 +9,10 @@
 			   minWidth="955" minHeight="600" creationComplete="onCreationComplete()">
 	<fx:Script>
 		<![CDATA[
+			import com.tomseysdavies.ember.io.JsonSerialiserTest;
 			import com.tomseysdavies.utils.VectorMapTest;
+			import com.tomseysdavies.ember.io.EntityEncoderTest;
+			import com.tomseysdavies.ember.io.ComponentEncoderTest;
 			import com.tomseysdavies.ember.entitySystem.impl.NodeConfigurationTest;
 			import com.tomseysdavies.ember.entitySystem.impl.EntityTest;
 			import com.tomseysdavies.ember.io.ComponentConfigTests;
@@ -24,7 +27,10 @@
 				testsToRun.push(com.tomseysdavies.ember.io.ComponentConfigTests);
 				testsToRun.push(com.tomseysdavies.ember.entitySystem.impl.EntityTest);
 				testsToRun.push(com.tomseysdavies.ember.entitySystem.impl.NodeConfigurationTest);
+				testsToRun.push(com.tomseysdavies.ember.io.ComponentEncoderTest);
+				testsToRun.push(com.tomseysdavies.ember.io.EntityEncoderTest);
 				testsToRun.push(com.tomseysdavies.utils.VectorMapTest);
+				testsToRun.push(com.tomseysdavies.ember.io.JsonSerialiserTest);
 				return testsToRun;
 			}
 			

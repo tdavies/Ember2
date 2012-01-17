@@ -1,6 +1,6 @@
 package com.tomseysdavies.ember.entitySystem.api
 {
-	public interface ISystems
+	public interface ISystemManager
 	{
 		function add(systemClass:Class):ISystem;
 		
