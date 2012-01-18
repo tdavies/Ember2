@@ -1,4 +1,28 @@
-The MIT License
+
+h2. Ember2: entity system framework for Flash 
+
+Note:
+This is still very much under development as is robotlegs 2 
+
+Demos: "Bunniemark":https://github.com/tdavies/Ember2-demos
+
+
+Developer : "Tom Davies": http://www.tomseysdavies.com
+	"Tom on Twitter": https://twitter.com/#!/tomsdavies
+
+
+h3. Goals
+
+Component based game architecture
+Fully modular
+Automated Injection
+Light weight
+Expandable
+
+
+
+
+h2. License
 
 Copyright (c) 2009, 2010, 2011 Tom Davies
 
