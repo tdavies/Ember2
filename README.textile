@@ -6,7 +6,7 @@ This is still very much under development as is robotlegs 2
 Demos: "Bunniemark":https://github.com/tdavies/Ember2-demos
 
 
-Developer : "Tom Davies":http://www.tomseysdavies.com
+Developer: "Tom Davies":http://www.tomseysdavies.com
 	"Tom on Twitter":https://twitter.com/#!/tomsdavies
 
 
