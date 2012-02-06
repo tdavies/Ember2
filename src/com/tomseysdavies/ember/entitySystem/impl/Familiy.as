@@ -40,6 +40,7 @@ package com.tomseysdavies.ember.entitySystem.impl
 		internal function removeEntity(entity:IEntity):void
 		{
 			const node:Node = _entityNodeMap[entity];
+			if(node == null) return;
 			_nodes.remove(node);
 			_entityRemovedSignal.dispatch(node);
 			delete _entityNodeMap[entity];

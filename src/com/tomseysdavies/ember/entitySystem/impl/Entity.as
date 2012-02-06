@@ -42,8 +42,8 @@ package com.tomseysdavies.ember.entitySystem.impl
 		public function remove(componentClass:Class):void
 		{
 			if (_components[componentClass] == null) return;			
-			delete _components[componentClass];
 			_componentRemoved.dispatch(this, componentClass);
+			delete _components[componentClass];
 		}
 		
 		public function has(componentClass:Class):Boolean

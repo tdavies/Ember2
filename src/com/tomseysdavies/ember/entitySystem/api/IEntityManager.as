@@ -10,7 +10,7 @@ package com.tomseysdavies.ember.entitySystem.api
 		function contains(entity:IEntity):Boolean;
 		function remove(entity:IEntity):void
 		function removeAll():void;
-		function requestFamiliy(nodeClass:Class):IFamily;
+		function requestFamily(nodeClass:Class):IFamily;
 	}	
 	
 }

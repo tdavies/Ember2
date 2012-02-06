@@ -1,14 +1,11 @@
 package com.tomseysdavies.ember.io
 {
-	import mocks.MockComponentA;
+import mocks.MockComponentA;
 
-	import org.hamcrest.assertThat;
-	import org.hamcrest.collection.array;
-	import org.hamcrest.collection.hasItem;
-	import org.hamcrest.collection.hasItems;
-	import org.hamcrest.object.equalTo;
+import org.hamcrest.assertThat;
+import org.hamcrest.collection.hasItem;
 
-	public class ComponentConfigTests
+public class ComponentConfigTests
 	{
 		
 		[Test]

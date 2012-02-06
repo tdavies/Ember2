@@ -1,20 +1,16 @@
 package com.tomseysdavies.ember.entitySystem.impl
 {
-	import com.tomseysdavies.ember.entitySystem.api.ISystem;
-	import com.tomseysdavies.ember.entitySystem.api.ISystemManager;
-	import com.tomseysdavies.ember.entitySystem.impl.SystemManager;
-	
-	import mocks.MockNode;
-	import mocks.MockSystem;
-	
-	import org.flexunit.assertThat;
-	import org.flexunit.asserts.assertFalse;
-	import org.flexunit.asserts.assertTrue;
-	import org.hamcrest.core.throws;
-	import org.swiftsuspenders.Injector;
+import com.tomseysdavies.ember.entitySystem.api.ISystem;
+import com.tomseysdavies.ember.entitySystem.api.ISystemManager;
 
-	
-	public class SystemsTest
+import mocks.MockNode;
+import mocks.MockSystem;
+
+import org.flexunit.asserts.assertFalse;
+import org.flexunit.asserts.assertTrue;
+import org.swiftsuspenders.Injector;
+
+public class SystemsTest
 	{
 		private var systems:ISystemManager;
 		
@@ -84,4 +80,3 @@ package com.tomseysdavies.ember.entitySystem.impl
 	}
 }
 
-[]

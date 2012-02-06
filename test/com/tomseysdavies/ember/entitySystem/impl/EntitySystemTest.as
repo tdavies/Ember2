@@ -1,25 +1,22 @@
 package com.tomseysdavies.ember.entitySystem.impl
 {
-	
-	import com.tomseysdavies.ember.entitySystem.api.IEntity;
-	import com.tomseysdavies.ember.entitySystem.api.IEntityManager;
-	import com.tomseysdavies.ember.entitySystem.api.IFamily;
-	
-	import flexunit.framework.Assert;
-	
-	import mocks.MockComponentA;
-	import mocks.MockComponentB;
-	import mocks.MockNode;
-	
-	import org.flexunit.assertThat;
-	import org.flexunit.asserts.assertFalse;
-	import org.flexunit.asserts.assertNotNull;
-	import org.flexunit.asserts.assertTrue;
-	import org.hamcrest.collection.hasItem;
-	import org.hamcrest.collection.hasItems;
-	import org.swiftsuspenders.Injector;
-	
-	public class EntitySystemTest
+
+import com.tomseysdavies.ember.entitySystem.api.IEntity;
+import com.tomseysdavies.ember.entitySystem.api.IEntityManager;
+import com.tomseysdavies.ember.entitySystem.api.IFamily;
+
+import mocks.MockComponentA;
+import mocks.MockComponentB;
+import mocks.MockNode;
+
+import org.flexunit.assertThat;
+import org.flexunit.asserts.assertFalse;
+import org.flexunit.asserts.assertNotNull;
+import org.flexunit.asserts.assertTrue;
+import org.hamcrest.collection.hasItem;
+import org.swiftsuspenders.Injector;
+
+public class EntitySystemTest
 	{		
 		private static const NAME:String = "testName";
 		
@@ -67,7 +64,8 @@ package com.tomseysdavies.ember.entitySystem.impl
 		{
 			var a:IEntity = system.create();
 			var b:IEntity = system.create();
-			assertThat(system.getAll(), hasItems(a, b));
+
+			assertThat(system.getAll(), hasItem(a), hasItem(b));
 		}
 
 		[Test]
@@ -81,14 +79,14 @@ package com.tomseysdavies.ember.entitySystem.impl
 		[Test]
 		public function can_get_family():void
 		{
-			var family:IFamily = system.requestFamiliy(MockNode);
+			var family:IFamily = system.requestFamily(MockNode);
 			assertNotNull(family);
 		}
 		
 		[Test]
 		public function qualifying_entities_are_added_to_family():void
 		{
-			var family:IFamily = system.requestFamiliy(MockNode);
+			var family:IFamily = system.requestFamily(MockNode);
 			
 			var a:IEntity = system.create();
 			a.add(new MockComponentA());
@@ -101,7 +99,7 @@ package com.tomseysdavies.ember.entitySystem.impl
 		[Test]
 		public function entities_are_removed_from_family():void
 		{
-			var family:IFamily = system.requestFamiliy(MockNode);
+			var family:IFamily = system.requestFamily(MockNode);
 			
 			var a:IEntity = system.create();
 			a.add(new MockComponentA());
@@ -119,7 +117,7 @@ package com.tomseysdavies.ember.entitySystem.impl
 			a.add(new MockComponentA());
 			a.add(new MockComponentB());
 			
-			var family:IFamily = system.requestFamiliy(MockNode);
+			var family:IFamily = system.requestFamily(MockNode);
 			
 			var nodes:Vector.<MockNode> = family.nodes as Vector.<MockNode>;
 			assertTrue(nodes[0].entity === a);
@@ -128,7 +126,7 @@ package com.tomseysdavies.ember.entitySystem.impl
 		[Test]
 		public function is_node_vecotor_avalible_for_injjection():void
 		{
-			var family:IFamily = system.requestFamiliy(MockNode);
+			var family:IFamily = system.requestFamily(MockNode);
 			var a:IEntity = system.create();
 			a.add(new MockComponentA());
 			a.add(new MockComponentB());
@@ -142,7 +140,7 @@ package com.tomseysdavies.ember.entitySystem.impl
 		[Test]
 		public function entities_are_removed_from_family_when_removed():void
 		{
-			var family:IFamily = system.requestFamiliy(MockNode);
+			var family:IFamily = system.requestFamily(MockNode);
 			
 			var a:IEntity = system.create();
 			a.add(new MockComponentA());

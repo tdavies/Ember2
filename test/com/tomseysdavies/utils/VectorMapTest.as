@@ -1,14 +1,13 @@
 package com.tomseysdavies.utils
 {
-	import flash.display.Sprite;
-	
-	import org.flexunit.assertThat;
-	import org.flexunit.asserts.assertNotNull;
-	import org.flexunit.asserts.assertTrue;
-	import org.hamcrest.collection.hasItem;
-	import org.hamcrest.object.isFalse;
+import flash.display.Sprite;
 
-	public class VectorMapTest
+import org.flexunit.assertThat;
+import org.flexunit.asserts.assertNotNull;
+import org.flexunit.asserts.assertTrue;
+import org.hamcrest.collection.hasItem;
+
+public class VectorMapTest
 	{		
 		private var vectorMap:VectorMap;
 		

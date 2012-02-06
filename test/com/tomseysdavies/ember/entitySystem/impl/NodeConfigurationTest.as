@@ -1,21 +1,15 @@
 package com.tomseysdavies.ember.entitySystem.impl
 {
-	import com.tomseysdavies.ember.entitySystem.api.IEntity;
-	
-	import flexunit.framework.Assert;
-	
-	import mocks.MockComponentA;
-	import mocks.MockComponentB;
-	import mocks.MockNode;
-	
-	import org.flexunit.assertThat;
-	import org.flexunit.asserts.assertEquals;
-	import org.flexunit.asserts.assertNotNull;
-	import org.flexunit.asserts.assertTrue;
-	import org.hamcrest.collection.hasItems;
-	import org.swiftsuspenders.Injector;
-	
-	public class NodeConfigurationTest
+import com.tomseysdavies.ember.entitySystem.api.IEntity;
+
+import mocks.MockComponentA;
+import mocks.MockComponentB;
+import mocks.MockNode;
+
+import org.flexunit.asserts.assertTrue;
+import org.swiftsuspenders.Injector;
+
+public class NodeConfigurationTest
 	{		
 		private var _nodeconfig:NodeConfiguration;
 		private var _entitySystem:EntityManager;

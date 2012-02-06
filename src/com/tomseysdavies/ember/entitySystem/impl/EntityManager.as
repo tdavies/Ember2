@@ -1,7 +1,7 @@
 package com.tomseysdavies.ember.entitySystem.impl
 {
-	import com.tomseysdavies.ember.entitySystem.api.IEntityManager;
 	import com.tomseysdavies.ember.entitySystem.api.IEntity;
+	import com.tomseysdavies.ember.entitySystem.api.IEntityManager;
 	import com.tomseysdavies.ember.entitySystem.api.IFamily;
 	import com.tomseysdavies.utils.VectorMap;
 	
@@ -68,11 +68,13 @@ package com.tomseysdavies.ember.entitySystem.impl
 		
 		public function removeAll():void
 		{
-			_entityMap.removeAll();
-			_nameMap = new Dictionary();
+			for (var i:int=0; i<entities.length; i++) {
+				remove(entities[i]);
+				i--;
+			}
 		}
 		
-		public function requestFamiliy(nodeClass:Class):IFamily{
+		public function requestFamily(nodeClass:Class):IFamily{
 			return _families.get(nodeClass);
 		}
 		
