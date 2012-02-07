@@ -65,7 +65,7 @@ public class EntitySystemTest
 			var a:IEntity = system.create();
 			var b:IEntity = system.create();
 
-			assertThat(system.getAll(), hasItem(a), hasItem(b));
+			assertTrue(system.getAll(), hasItem(a), hasItem(b));
 		}
 
 		[Test]
